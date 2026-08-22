@@ -1,4 +1,4 @@
-<img width="1254" height="1254" alt="ChatGPT Image Aug 22, 2026, 12_35_20 PM" src="https://github.com/user-attachments/assets/6675837d-bfc2-48fe-af5c-be2e8315707b" />
+
 # Code-Tantrum 😤
 
 A browser extension that hides CodeTantra's SensAI assistant popups — the **"Are you stuck?"** idle nag, the auto-opening chat panel, the MCQ helper toolbar, and the floating mascot.
@@ -68,3 +68,4 @@ Use at your own discretion and in line with your institution's policies.
 ---
 
 Thank you :)
+<img width="125" height="125" alt="ChatGPT Image Aug 22, 2026, 12_35_20 PM" src="https://github.com/user-attachments/assets/6675837d-bfc2-48fe-af5c-be2e8315707b" />
