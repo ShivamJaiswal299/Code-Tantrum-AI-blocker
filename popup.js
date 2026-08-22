@@ -9,7 +9,7 @@ const rescanBtn = document.getElementById('rescan');
 
 function getSettings() {
   return new Promise((resolve) => {
-    chrome.storage.sync.get([STORAGE_KEY], (res) => {
+    chrome.storage.local.get([STORAGE_KEY], (res) => {
       resolve({ ...DEFAULTS, ...(res[STORAGE_KEY] || {}) });
     });
   });
@@ -19,7 +19,7 @@ function saveSettings(partial) {
   return getSettings().then((current) => {
     const next = { ...current, ...partial };
     return new Promise((resolve) => {
-      chrome.storage.sync.set({ [STORAGE_KEY]: next }, () => resolve(next));
+      chrome.storage.local.set({ [STORAGE_KEY]: next }, () => resolve(next));
     });
   });
 }
