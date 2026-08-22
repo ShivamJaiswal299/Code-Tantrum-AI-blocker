@@ -52,7 +52,7 @@ async function refreshStatus() {
   if (!tab || !tab.id) return;
   chrome.tabs.sendMessage(tab.id, { type: 'ctblocker_get_status' }, (res) => {
     if (chrome.runtime.lastError) {
-      statusText.textContent = 'Open a CodeTantra page to activate';
+      statusText.textContent = 'Open or refresh CodeTantra tab to activate';
       hiddenCountEl.textContent = '—';
       return;
     }
