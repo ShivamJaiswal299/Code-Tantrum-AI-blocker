@@ -1,4 +1,3 @@
-
 # Code-Tantrum 😤
 
 A browser extension that hides CodeTantra's SensAI assistant popups — the **"Are you stuck?"** idle nag, the auto-opening chat panel, the MCQ helper toolbar, and the floating mascot.
@@ -23,21 +22,22 @@ No more losing focus mid-problem because a cartoon sun wants to check in on you.
 
 ## Installation
 
-### Chrome / Edge / Brave
+One version of the extension works across **Chrome, Edge, Brave, and Firefox** — no need to pick a browser-specific download.
 
-1. Download this repo using **Code → Download ZIP** and unzip it, or clone it with Git.
-2. Open `edge://extensions` or `chrome://extensions`
-3. Turn on **Developer mode** — usually in the top-right
-4. Click **Load unpacked**
-5. Select the unzipped `chromium/` folder
-6. Pin the extension and you're done.
+1. Download this repo using **Code → Download ZIP**.
+2. Follow the steps for your browser below.
 
-### Firefox
+**Chrome / Edge / Brave**
+- Open `edge://extensions` or `chrome://extensions`
+- Turn on **Developer mode** — usually in the top-right
+- Click **Load unpacked**
+- Select the unzipped folder
+- Pin the extension and you're done.
 
-1. Download and unzip this repo as above.
-2. Open `about:debugging#/runtime/this-firefox`
-3. Click **Load Temporary Add-on**
-4. Select the `manifest.json` file inside the `firefox/` folder
+**Firefox**
+- Open `about:debugging#/runtime/this-firefox`
+- Click **Load Temporary Add-on**
+- Select the `manifest.json` file inside the unzipped folder
 
 > **Note:** Firefox temporary add-ons are unloaded when you restart the browser. For a permanent installation, the extension needs to be signed through Mozilla's Add-on site, or you can set `xpinstall.signatures.required` to `false` in `about:config` (**advanced users only**).
 
