@@ -118,7 +118,7 @@ body {
   left: 5px;
   bottom: 5px;
 }
-.switch-lg input:checked + .slider::before {
+.switch.switch-lg input:checked + .slider::before {
   transform: translateX(32px);
 }
 .slider {
