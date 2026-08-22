@@ -1,11 +1,10 @@
 const STORAGE_KEY = 'ctblocker_settings';
-const DEFAULTS = { enabled: true, customSelectors: '', theme: 'auto' };
+const DEFAULTS = { enabled: true, customSelectors: '', theme: 'dark' };
 
 const enabledToggle = document.getElementById('enabledToggle');
 const themeOptions = document.getElementById('themeOptions');
 const statusText = document.getElementById('statusText');
 const hiddenCountEl = document.getElementById('hiddenCount');
-const rescanBtn = document.getElementById('rescan');
 
 function getSettings() {
   return new Promise((resolve) => {
@@ -25,14 +24,7 @@ function saveSettings(partial) {
 }
 
 function applyThemeToDocument(theme) {
-  if (theme === 'auto') {
-    chrome.storage.local.get(['ctblocker_page_theme'], (res) => {
-      const resolved = res.ctblocker_page_theme || 'dark';
-      document.documentElement.setAttribute('data-theme', resolved);
-    });
-  } else {
-    document.documentElement.setAttribute('data-theme', theme);
-  }
+  document.documentElement.setAttribute('data-theme', theme);
 }
 
 function highlightThemeButton(theme) {
@@ -87,10 +79,5 @@ themeOptions.addEventListener('click', async (e) => {
   highlightThemeButton(theme);
 });
 
-rescanBtn.addEventListener('click', async () => {
-  const tab = await getActiveTab();
-  if (!tab || !tab.id) return;
-  chrome.tabs.sendMessage(tab.id, { type: 'ctblocker_rescan' }, () => refreshStatus());
-});
 
 init();
