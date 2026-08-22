@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Code-Tantrum</title>
+<link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <header class="header">
+      <div class="brand">
+        <span class="brand-mark"><img src="icons/icon32.png" alt="" class="brand-mark-img" /></span>
+        <span class="brand-name">Code-Tantrum</span>
+      </div>
+      <span class="brand-sub">CodeTantra Popup Blocker</span>
+    </header>
+
+    <section class="card">
+      <div class="row">
+        <div class="row-text">
+          <div class="row-title">Block Tantrums</div>
+          <div class="row-sub" id="statusText">Hides "Are you stuck?" and assistant popups</div>
+        </div>
+        <label class="switch">
+          <input type="checkbox" id="enabledToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="row">
+        <div class="row-text">
+          <div class="row-title">Theme</div>
+          <div class="row-sub">Match CodeTantra automatically, or choose</div>
+        </div>
+      </div>
+      <div class="theme-options" id="themeOptions">
+        <button class="theme-btn" data-theme="auto">Auto</button>
+        <button class="theme-btn" data-theme="dark">Dark</button>
+        <button class="theme-btn" data-theme="light">Light</button>
+      </div>
+    </section>
+    <footer class="footer">
+      <span id="hiddenCount">0 popups blocked this session</span>
+      <button class="rescan-btn" id="rescan">Rescan page?</button>
+    </footer>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
