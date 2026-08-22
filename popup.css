@@ -101,6 +101,26 @@ body {
 /* Toggle switch */
 .switch { position: relative; display: inline-block; width: 38px; height: 22px; flex-shrink: 0; }
 .switch input { opacity: 0; width: 0; height: 0; }
+.toggle-card {
+  align-items: center;
+  text-align: center;
+  padding: 16px 12px;
+}
+
+.switch-lg {
+  width: 76px;
+  height: 44px;
+  margin-top: 4px;
+}
+.switch-lg .slider::before {
+  height: 34px;
+  width: 34px;
+  left: 5px;
+  bottom: 5px;
+}
+.switch-lg input:checked + .slider::before {
+  transform: translateX(32px);
+}
 .slider {
   position: absolute; cursor: pointer; inset: 0;
   background: var(--border);
